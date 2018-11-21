@@ -8,6 +8,7 @@ import org.junit.Test;
 public class LibraryNewspaperTest {
 
 	int idBefore = Items.numOfItems;
+	@SuppressWarnings("deprecation")
 	static Date tempDate = new Date(2012, 10, 12);
 	static Newspapers newspaper1 = new Newspapers("Daily Mail", tempDate, false);
 	
