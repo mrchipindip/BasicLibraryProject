@@ -45,7 +45,7 @@ public class Library {
 	{
 
 		if(!Items.itemMap.isEmpty())
-		{
+		{	
 			String tempBuilder = "";
 			String fileLocation = "C:\\Users\\chipi\\Library.txt";
 			
@@ -84,6 +84,7 @@ public class Library {
 			System.out.println("No items currently in  the library to save");
 		}
 	}
+	
 	
 	public void populateLibrary()
 	{
