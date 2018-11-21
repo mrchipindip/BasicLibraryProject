@@ -17,6 +17,16 @@ public class Maps extends Items{
 		
 	}
 	
+	public Maps(String paramLocation, int paramCrosses)
+	{
+		numOfItems++;
+		setMapID(numOfItems);
+		setLocation(paramLocation);
+		setNumOfRedCrosses(paramCrosses);
+		setOnLoan(false);
+		
+	}
+	
 	public int loanTime()
 	{
 		//in weeks

@@ -1,6 +1,7 @@
 package com.cognizant;
 
 import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 public class LibraryBookTests {
@@ -40,6 +41,13 @@ public class LibraryBookTests {
 	public void bookConstructorCheck3()
 	{
 		assertEquals("Book onLoan Return", false, booky3.isOnLoan());
+	}
+	
+	@Test
+	public void checkToString()
+	{
+		String shouldEqual = "ID: B2\r\nName: Woody\r\nAuthor: Jeremy\r\nPages: 46\r\nBook currently on loan: false";
+		assertEquals("Object Tostring output check", shouldEqual, booky3.toString());
 	}
 	@Test
 	public void bookConstructorCheckRest()
