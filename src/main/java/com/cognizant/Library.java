@@ -1,6 +1,7 @@
 package com.cognizant;
 
 import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -36,15 +37,17 @@ public class Library {
 			System.out.println("-");
 		}
 		
+		saveToFile();
+		
 	}
 	
-	public void saveToFile(String FILENAME)
+	public void saveToFile()
 	{
 
 		if(!Items.itemMap.isEmpty())
 		{
 			String tempBuilder = "";
-			String fileLocation = "";
+			String fileLocation = "C:\\Users\\chipi\\Library.txt";
 			
 			Iterator<Entry<Integer, Items>> it = Items.itemMap.entrySet().iterator();
 			while (it.hasNext())
@@ -69,7 +72,7 @@ public class Library {
 			
 			try(BufferedWriter bw = new BufferedWriter(new FileWriter(fileLocation)))
 			{
-				
+				bw.write(tempBuilder);
 			} 
 			catch (IOException e)
 			{
