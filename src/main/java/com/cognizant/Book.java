@@ -26,6 +26,7 @@ public class Book extends Items {
 		setOnLoan(onLoan);
 		this.setPageLength(pageLength);
 		setName(name);
+		itemMap.put(bookID, this);
 	}
 	
 	public String toString()
@@ -41,6 +42,11 @@ public class Book extends Items {
 	{
 		//in weeks
 		return 4;
+	}
+	
+	public String getType()
+	{
+		return "BOOK";
 	}
 
 	public String getName()

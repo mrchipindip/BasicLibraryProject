@@ -14,6 +14,8 @@ public class Maps extends Items{
 		setLocation(paramLocation);
 		setNumOfRedCrosses(paramCrosses);
 		setOnLoan(onLoan);
+		itemMap.put(mapID, this);
+
 		
 	}
 	
@@ -24,6 +26,8 @@ public class Maps extends Items{
 		setLocation(paramLocation);
 		setNumOfRedCrosses(paramCrosses);
 		setOnLoan(false);
+		itemMap.put(mapID, this);
+
 		
 	}
 	
@@ -31,6 +35,11 @@ public class Maps extends Items{
 	{
 		//in weeks
 		return 1;
+	}
+	
+	public String getType()
+	{
+		return "MAP";
 	}
 	
 	public String toString()

@@ -16,6 +16,8 @@ public class Newspapers extends Items{
 		setPublisher(pub);
 		setPubDate(pubDate);
 		setOnLoan(onLoan);
+		itemMap.put(newsID, this);
+
 	}
 	
 	public Newspapers(String pub, Date pubDate) 
@@ -24,6 +26,8 @@ public class Newspapers extends Items{
 		setNewsID(numOfItems);
 		setPublisher(pub);
 		setPubDate(pubDate);
+		itemMap.put(newsID, this);
+
 	}
 	
 	public Newspapers(String pub, boolean onLoan) 
@@ -34,6 +38,8 @@ public class Newspapers extends Items{
 		setOnLoan(onLoan);
 		Date tempDate = new Date();
 		setPubDate(tempDate);
+		itemMap.put(newsID, this);
+
 	}
 	
 	public Newspapers(String pub) 
@@ -43,11 +49,18 @@ public class Newspapers extends Items{
 		setPublisher(pub);
 		Date tempDate = new Date();
 		setPubDate(tempDate);
+		itemMap.put(newsID, this);
+
 	}
 	
 	public String toString()
 	{
 		return "ID: " + "N" + getNewsID() + "\r\n" + "Publisher: " + getPublisher() + "\r\n" + "Date of Publish: " + getPubDate() + "\r\n" + "Currently on loan: " + isOnLoan();
+	}
+	
+	public String getType()
+	{
+		return "NEWS";
 	}
 	
 	public int loanTime()
