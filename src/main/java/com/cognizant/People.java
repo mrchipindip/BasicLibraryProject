@@ -1,16 +1,22 @@
 package com.cognizant;
 
+import java.util.HashMap;
+
 public class People {
 	
+	public static HashMap<Integer, People> peopleMap = new HashMap<Integer, People>();
+	private static int peopleNum=0;
 	private String username ="";
 	private String password = "";
 	private String name;
 	
 	public People(String name, String username, String password)
 	{
+		peopleNum++;
 		setName(name);
 		setUsername(username);
 		setPassword(password);
+		peopleMap.put(peopleNum, this);
 	}
 	
 	public String getUsername()

@@ -85,6 +85,60 @@ public class Library {
 		}
 	}
 	
+	public void updateStaff(int perID, String name, String username, String password, double salary, boolean permissions)
+	{
+		People.peopleMap.get(perID).setName(name);
+		People.peopleMap.get(perID).setUsername(username);
+		People.peopleMap.get(perID).setPassword(password);
+		Staff tempStaff = (Staff)People.peopleMap.get(perID);
+		tempStaff.setSalary(salary);
+		tempStaff.setPermissions(permissions);
+	}
+	
+	public void updateCustomer(int perID, String name, String username, String password, String email, boolean itemOverdue)
+	{
+		People.peopleMap.get(perID).setName(name);
+		People.peopleMap.get(perID).setUsername(username);
+		People.peopleMap.get(perID).setPassword(password);
+		Customer tempCustomer = (Customer)People.peopleMap.get(perID);
+		tempCustomer.setEmail(email);
+		tempCustomer.setItemOverdue(itemOverdue);
+	}
+	
+	public void removePerson(int perID)
+	{
+		People.peopleMap.remove(perID);
+	}
+	
+	public void addStaff(String name, String username, String password, double salary, boolean permissions)
+	{
+		Staff newStaff = new Staff(name, username, password, salary, permissions);
+	}
+	
+	public void addCustomer(String name, String username, String password, String email)
+	{
+		Customer newCustomer = new Customer(name, username, password, email);
+	}
+	
+	public void removeItem(int itemID)
+	{
+		Items.itemMap.remove(itemID);
+	}
+	
+	public void addBook(String author, int pageLength, String name)
+	{
+		Book newBook = new Book(author, false, pageLength, name);
+	}
+	
+	public void addMap(String paramLocation, int paramCrosses)
+	{
+		Maps newMap = new Maps(paramLocation, paramCrosses);
+	}
+	
+	public void addNewspaper(String pub, Date pubDate)
+	{
+		Newspapers newNews = new Newspapers(pub, pubDate);
+	}
 	
 	public void populateLibrary()
 	{

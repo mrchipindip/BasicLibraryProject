@@ -58,4 +58,9 @@ public class Customer extends People{
 	public void setItemOverdue(boolean itemOverdue) {
 		this.itemOverdue = itemOverdue;
 	}
+	
+	public void takeOutBook (Items paramBook)
+	{
+		itemsBorrowed.add(paramBook);
+	}
 }
