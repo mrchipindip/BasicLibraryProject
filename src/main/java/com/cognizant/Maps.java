@@ -19,6 +19,18 @@ public class Maps extends Items{
 		
 	}
 	
+	public Maps(int mapID, String paramLocation, int paramCrosses, boolean onLoan)
+	{
+		numOfItems++;
+		setMapID(mapID);
+		setLocation(paramLocation);
+		setNumOfRedCrosses(paramCrosses);
+		setOnLoan(onLoan);
+		itemMap.put(this.mapID, this);
+
+		
+	}
+	
 	public Maps(String paramLocation, int paramCrosses)
 	{
 		numOfItems++;

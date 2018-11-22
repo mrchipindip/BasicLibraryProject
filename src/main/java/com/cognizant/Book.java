@@ -29,6 +29,17 @@ public class Book extends Items {
 		itemMap.put(bookID, this);
 	}
 	
+	public Book(int bookId, String author, boolean onLoan, int pageLength, String name)
+	{
+		numOfItems++;
+		setBookID(bookID);
+		setAuthor(author);
+		setOnLoan(onLoan);
+		this.setPageLength(pageLength);
+		setName(name);
+		itemMap.put(this.bookID, this);
+	}
+	
 	public String toString()
 	{
 		String temp;

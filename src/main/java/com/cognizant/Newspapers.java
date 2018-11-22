@@ -9,6 +9,17 @@ public class Newspapers extends Items{
 	private Date pubDate;
 	private boolean isOnLoan = false;
 	
+	public Newspapers(int newsID, String pub, Date pubDate, boolean onLoan) 
+	{
+		numOfItems++;
+		setNewsID(newsID);
+		setPublisher(pub);
+		setPubDate(pubDate);
+		setOnLoan(onLoan);
+		itemMap.put(this.newsID, this);
+
+	}
+	
 	public Newspapers(String pub, Date pubDate, boolean onLoan) 
 	{
 		numOfItems++;
@@ -19,6 +30,7 @@ public class Newspapers extends Items{
 		itemMap.put(newsID, this);
 
 	}
+
 	
 	public Newspapers(String pub, Date pubDate) 
 	{

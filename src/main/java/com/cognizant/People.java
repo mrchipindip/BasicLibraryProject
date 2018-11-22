@@ -19,6 +19,7 @@ public class People {
 		peopleMap.put(peopleNum, this);
 	}
 	
+	
 	public String getUsername()
 	{
 		return username;

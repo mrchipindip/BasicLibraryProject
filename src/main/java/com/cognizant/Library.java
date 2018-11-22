@@ -41,6 +41,11 @@ public class Library {
 		
 	}
 	
+	public void loadFromFile()
+	{
+		String fileNation 
+	}
+	
 	public void saveToFile()
 	{
 
@@ -93,6 +98,11 @@ public class Library {
 		Staff tempStaff = (Staff)People.peopleMap.get(perID);
 		tempStaff.setSalary(salary);
 		tempStaff.setPermissions(permissions);
+	}
+	
+	public void updateItem()
+	{
+		
 	}
 	
 	public void updateCustomer(int perID, String name, String username, String password, String email, boolean itemOverdue)
