@@ -1,6 +1,8 @@
 package com.cognizant;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,7 +24,7 @@ public class Library {
 //		ArrayList<Newspapers> newsList = new ArrayList<Newspapers>();
 //		
 //		HashMap<Integer, String> itemMap = new HashMap<Integer, String>();
-
+		
 		
 	}
 	
@@ -41,9 +43,26 @@ public class Library {
 		
 	}
 	
+	
 	public void loadFromFile()
 	{
-		String fileNation 
+		String fileNation = "";
+		
+		try(BufferedReader br = new BufferedReader(new FileReader(fileNation)))
+		{
+			String sCurrentFileLine;
+			while((sCurrentFileLine = br.readLine()) != null)
+			{
+				System.out.println(sCurrentFileLine);
+				//split the string
+				String[] splitInput = sCurrentFileLine.split(" ");
+			
+			}
+		}
+		catch(IOException e)
+		{
+			
+		}
 	}
 	
 	public void saveToFile()
@@ -77,7 +96,7 @@ public class Library {
 			
 			try(BufferedWriter bw = new BufferedWriter(new FileWriter(fileLocation)))
 			{
-				bw.write(tempBuilder);
+				bw.write(tempBuilder + "\r\n");
 			} 
 			catch (IOException e)
 			{
